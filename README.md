@@ -1,2 +1,2 @@
-# https-github.com-Iskenderun-Technical-University-Resturant_Otomasyonu
+# https-github.com-Iskenderun-Technical-University-Restaurant_Otomasyonu
 Bir tane restorantımız bulunmaktadır. Biz buraya olan masa sayısını,çalışan sayısını,sipariş listesini ve sipariş durumunu belirten, çalışanların giriş ve çıkışı saatleri belirtilen, menu görüntülen bir otomasyonumuz vardır.
