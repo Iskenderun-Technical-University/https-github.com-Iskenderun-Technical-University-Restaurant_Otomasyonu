@@ -161,10 +161,22 @@ namespace Resturant_Otomasyonu
                 masa.Hareket = new List<UrunHareket>();
             }
             seciliMasa = masa.MasaKodu;
+            dataGridView1.DataSource = masa.Hareket;
         }
         private void Urun_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Simplebutton button = (Simplebutton)sender;
+            Urun urun = Urunler.SingleOrDefault(c => c.UrunKodu == button.Name);
+            Masalar.SingleOrDefault(c => c.MasaKodu == seciliMasa).Hareket.Add(new UrunHareket
+            {
+                Urunkodu = urun.UrunKodu,
+                UrunAdi = urun.UrunAdi,
+                Fiyat=urun.Fiyat,
+                Miktar=1
+            });
+            Simplebutton buttonMasa = (Simplebutton)flowmasalar.Controls.Find(seciliMasa, true).SingleOrDefault();
+            
+
         }
     }
 }
