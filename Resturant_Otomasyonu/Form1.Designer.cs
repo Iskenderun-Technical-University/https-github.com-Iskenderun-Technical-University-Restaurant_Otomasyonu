@@ -36,8 +36,10 @@ namespace Resturant_Otomasyonu
             this.urun = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.masa.SuspendLayout();
             this.urun.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // masa
@@ -102,11 +104,22 @@ namespace Resturant_Otomasyonu
             this.label2.TabIndex = 4;
             this.label2.Text = "URUNLER";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(718, 493);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 3;
+            // 
             // pageUrunler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1373, 643);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.urun);
             this.Controls.Add(this.masa);
             this.Name = "pageUrunler";
@@ -115,6 +128,7 @@ namespace Resturant_Otomasyonu
             this.masa.PerformLayout();
             this.urun.ResumeLayout(false);
             this.urun.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -127,6 +141,7 @@ namespace Resturant_Otomasyonu
         private System.Windows.Forms.Panel urun;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

@@ -11,7 +11,7 @@ namespace Resturant_Otomasyonu
         public int Id { get; set; } 
         public string MasaKodu { get; set;}
         public string MasaAdi { get; set; }
-      //  public List<UrunHareket> Hareket { get; set; }
+       public List<UrunHareket> Hareket { get; set; }
         public string Name { get; internal set; }
         public string Text { get; internal set; }
         public int Height { get; internal set; }

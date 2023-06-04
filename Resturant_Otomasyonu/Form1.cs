@@ -17,6 +17,8 @@ namespace Resturant_Otomasyonu
         private List<Urun> Urunler = new List<Urun>();
         private List<UrunHareket> UrunHareketleri = new List<UrunHareket>();
         private Control masaButton;
+        private Control urunButton;
+        private string  seciliMasa;
 
         public pageUrunler()
         {
@@ -109,30 +111,58 @@ namespace Resturant_Otomasyonu
                 MasaAdi = "Masa-6"
             });
             ButonOluştur();
+            dataGridView1.DataSource = UrunHareketleri;
         }
    
 
         private  void ButonOluştur()
+        
         {
           
 
             foreach ( var masa in Masalar)
             {
 
-                Masalar.Add(new Masa{
-               
-                Name =masa.MasaKodu,
-                Text =masa.MasaKodu,
-                Height=80,
-                Width=80
+                Masalar.Add(new Masa
+                {
 
-                });
+                    Name = masa.MasaKodu,
+                    Text = masa.MasaKodu,
+                    Height = 80,
+                    Width = 80,
+                   
+
+                }); 
                 flowmasalar.Controls.Add(masaButton);
                 masaButton.Click += Masa_Click;
+            }
+            foreach (var urun in Urunler)
+            {
+
+                Urunler.Add(new Urun {
+
+                    Name = urun.UrunKodu,
+                    Text =urun.UrunAdi,
+                    Height = 80,
+                    Width = 80
+
+                });
+                flowurunler.Controls.Add(urunButton);
+                urunButton.Click += Urun_Click;
             }
         }
 
         private void Masa_Click(object sender, EventArgs e)
+        {
+          Simplebutton button=(Simplebutton)sender;
+           Masa masa = Masalar.SingleOrDefault(c => c.MasaKodu == button.Name);
+            if (masa.Hareket != null)
+            {
+                masa.Hareket = new List<UrunHareket>();
+            }
+            seciliMasa = masa.MasaKodu;
+        }
+        private void Urun_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
         }

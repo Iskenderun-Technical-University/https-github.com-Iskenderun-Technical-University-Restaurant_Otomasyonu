@@ -55,6 +55,7 @@
     <Compile Include="Masa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Simplebutton.cs" />
     <Compile Include="Urun.cs" />
     <Compile Include="UrunHareket.cs" />
     <EmbeddedResource Include="Form1.resx">

@@ -15,6 +15,10 @@ namespace Resturant_Otomasyonu
 
         public String Birimi { get; set; }
         public double Fiyat { get; set; }
+        public string Name { get; internal set; }
+        public string  Text { get; internal set; }
+        public double Height { get; internal set; }
+        public double Width { get; internal set; }
 
     }
 }
