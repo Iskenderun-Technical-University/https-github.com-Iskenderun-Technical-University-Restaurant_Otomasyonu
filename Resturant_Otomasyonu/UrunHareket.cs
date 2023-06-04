@@ -14,8 +14,8 @@ namespace Resturant_Otomasyonu
         public String UrunAdi { get; set; }
 
         public String Birimi { get; set; }
-        public decimal Fiyat { get; set; }
-        public decimal Miktar { get; set; }
+        public double Fiyat { get; set; }
+        public double Miktar { get; set; }
 
     }
 }
