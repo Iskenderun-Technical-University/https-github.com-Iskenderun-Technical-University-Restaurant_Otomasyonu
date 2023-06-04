@@ -162,6 +162,7 @@ namespace Resturant_Otomasyonu
             }
             seciliMasa = masa.MasaKodu;
             dataGridView1.DataSource = masa.Hareket;
+            txtToplam.Value = Convert.ToDecimal(DataGridViewColumnCollection.SummaryItem.SummeryValues);
         }
         private void Urun_Click(object sender, EventArgs e)
         {
@@ -175,8 +176,22 @@ namespace Resturant_Otomasyonu
                 Miktar=1
             });
             Simplebutton buttonMasa = (Simplebutton)flowmasalar.Controls.Find(seciliMasa, true).SingleOrDefault();
-            
+            txtToplam.Value = Convert.ToDecimal(DataGridViewColumnCollection.SummaryItem.SummeryValues);
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            label1.DataBindings.Add("Text", txtToplam, "Value");
+        }
+
+        private void btnode_Click(object sender, EventArgs e)
+        {
+            Simplebutton buttonMasa = (Simplebutton)flowmasalar.Controls.Find(seciliMasa, true).SingleOrDefault();
+            var masa = Masalar.SingleOrDefault(c => c.MasaKodu == buttonMasa.Name);
+            masa.Hareket = new List<UrunHareket>();
+            dataGridView1.DataSource = masa.Hareket;
+            txtToplam.Value = 0;
         }
     }
 }

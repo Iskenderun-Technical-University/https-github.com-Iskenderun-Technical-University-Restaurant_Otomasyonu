@@ -38,11 +38,14 @@ namespace Resturant_Otomasyonu
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.txtToplam = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnode = new System.Windows.Forms.Button();
             this.masa.SuspendLayout();
             this.urun.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToplam)).BeginInit();
             this.SuspendLayout();
             // 
             // masa
@@ -119,6 +122,9 @@ namespace Resturant_Otomasyonu
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnode);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtToplam);
             this.groupBox1.Location = new System.Drawing.Point(964, 555);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 85);
@@ -126,25 +132,44 @@ namespace Resturant_Otomasyonu
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Toplam Tutar";
             // 
-            // numericUpDown1
+            // txtToplam
             // 
-            this.numericUpDown1.DecimalPlaces = 5;
-            this.numericUpDown1.Increment = new decimal(new int[] {
+            this.txtToplam.DecimalPlaces = 5;
+            this.txtToplam.Increment = new decimal(new int[] {
             2,
             0,
             0,
             0});
-            this.numericUpDown1.Location = new System.Drawing.Point(700, 574);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(215, 22);
-            this.numericUpDown1.TabIndex = 0;
+            this.txtToplam.Location = new System.Drawing.Point(108, 32);
+            this.txtToplam.Name = "txtToplam";
+            this.txtToplam.Size = new System.Drawing.Size(86, 22);
+            this.txtToplam.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(38, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 17);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Tutar";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // btnode
+            // 
+            this.btnode.Location = new System.Drawing.Point(23, 57);
+            this.btnode.Name = "btnode";
+            this.btnode.Size = new System.Drawing.Size(134, 23);
+            this.btnode.TabIndex = 5;
+            this.btnode.Text = "Hesabı Öde";
+            this.btnode.UseVisualStyleBackColor = true;
+            this.btnode.Click += new System.EventHandler(this.btnode_Click);
             // 
             // pageUrunler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1373, 643);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.urun);
@@ -156,7 +181,9 @@ namespace Resturant_Otomasyonu
             this.urun.ResumeLayout(false);
             this.urun.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToplam)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -171,7 +198,9 @@ namespace Resturant_Otomasyonu
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown txtToplam;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnode;
     }
 }
 
